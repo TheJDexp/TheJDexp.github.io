@@ -1,0 +1,15 @@
+/***************
+JQUERY TESTS
+****************/
+
+.inspire {
+  word-spacing: 1.5px;
+  letter-spacing: 3px;
+  text-decoration: none;
+  color: lightgrey;
+  font-family: "Arial", Gadget, sans-serif;
+  font-weight: lighter;
+  text-transform: uppercase;
+  font-size: 15 px;
+  text-align: center;
+}
