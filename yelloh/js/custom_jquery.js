@@ -1,3 +1,5 @@
+/* Preloader brand animation */
+
 $(".quote").addClass("inspire");
 
 $("#preloader").children().addClass("inspire")
@@ -15,47 +17,26 @@ $(window).on('load', function() {
   $("#preloader").delay(2000).fadeOut();
 });
 
-
-
-
-
-
-
-/*
-
-  var $letters =("#preloader > h2");
-  var delay = 500;
-
-  $cards.each(function(index) {
-    $(this).delay(500*index).addClass('position');
+$(window).on('beforeunload', function() {
+	$("#preloader-background").fadeIn();
 });
 
+/* Function to highlight current menu URL */
+
+$(function () {
+  setNavigation();
 });
-  var $letters =("#preloader > h2");
-  var
 
-});
+function setNavigation() {
+    var path = window.location.pathname;
+    path = path.replace(/\/$/, "");
+    path = decodeURIComponent(path);
 
-
-
-  var time = 0;
-
-  setTimeout(function() {
-      $(".testBox").append('<p class="box">' + value + '</p>');
-      console.log('yes');
-    }, time * 1000)
-    time++;
-  });
-
-
-  $("#preloader > h2").each(function(){
-    $(this).delay(500 * index).addClass("animLetters");
-    console.log(index);
-  })*/
-
-
-/*$( window ).on( "load", function() {
-
-  preloader background opacity fade out
-
- })*/
+    $(".top-nav a, .mobile a").each(function () {
+        var href = $(this).attr('href');
+        lastPath = path.substr(path.lastIndexOf('/') + 1)
+        if (lastPath === href) {
+            $(this).closest('li').addClass('active');
+          }
+        });
+      }
