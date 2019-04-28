@@ -1,8 +1,5 @@
 /* Preloader brand animation */
 
-$(".quote").addClass("inspire");
-
-$("#preloader").children().addClass("inspire")
 
 $(document).ready(function() {
   $("#preloader > h2").each(function(index) {
