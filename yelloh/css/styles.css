@@ -12,6 +12,14 @@ ul {
   padding: 0;
 }
 
+p {
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+
 /***************
 JQUERY TESTS
 ****************/
@@ -319,6 +327,7 @@ video {
   max-height: 500px;
   width: 100%;
   overflow: hidden;
+  background-color: #f0f0f0;
 }
 
 article {
@@ -345,12 +354,6 @@ article {
   position: absolute;
 }
 
-@media screen and (max-width: 768px) {
-  .inspire {
-    top: 40%;
-  }
-}
-
 .overlay {
   position: absolute;
     top: 0;
@@ -361,4 +364,130 @@ article {
     color: #FFF;
     display: block;
     background: linear-gradient(to bottom, rgba(55,55,55,1) 0%,rgba(107,107,107,0) 100%);
+}
+
+.container {
+  background-color: #f0f0f0;
+  padding: 25px;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 25px;
+    padding-top: 25px;
+
+  }
+
+  .inspire {
+    top: 15px;
+    color: white;
+    text-align: left;
+    width: 100px;
+    margin: initial;
+  }
+  .overlay {
+    background: linear-gradient(to right, rgb(198, 198, 198) 0%,rgba(255, 255, 255, 0) 100%);
+  }
+
+}
+
+
+
+.block {
+  display: grid;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  max-width: 1200px;
+  max-height: 500px;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 50px auto;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+}
+
+.block img {
+  height: auto;
+  object-fit: cover;
+  width: 100%;
+  height: 450px;
+}
+
+.block h3 {
+  word-spacing: 1.5px;
+  text-decoration: none;
+  color: #999;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-weight: normal;
+  font-size: 32px;
+  margin: 0;
+  padding-left: 5px;
+}
+
+
+
+.block1 .col1 {
+  background-image: url(../imgs/device-electronics-keyboard-872958.jpg);
+  background-size: cover;
+}
+
+.block2 .col3 {
+  background-image: url(../imgs/arts-build-close-up-273230.jpg);
+  background-size: cover;
+}
+
+.block3 .col1 {
+  background-image: url(../imgs/macbook_iphone.jpeg);
+  background-size: cover;
+}
+
+.block4 .col3 {
+  background-image: url(../imgs/blur-camera-equipment-camera-lens-736414.jpg);
+  background-size: cover;
+}
+
+.content-left {
+  grid-column: 1 / span 1;
+  grid-row: 2 / span 1;
+}
+
+.mid-text {
+  grid-column: 1 / span 2;
+  grid-row: 1 / span 1;
+  background-color: white;
+}
+
+.content-right p {
+  text-align: center;
+  top: 50%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  position: relative;
+  color: white;
+  text-shadow: 0px 3px 15px rgb(41, 41, 41);
+  letter-spacing: 1px;
+  width: 80%;
+}
+
+.content-left p {
+  text-align: center;
+  top: 50%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  position: relative;
+  color: white;
+  text-shadow: 0px 3px 15px rgb(41, 41, 41);
+  letter-spacing: 1px;
+  width: 80%;
+}
+
+.content-right {
+  grid-column: 2 / span 1;
+  grid-row: 2 / span 1;
 }
